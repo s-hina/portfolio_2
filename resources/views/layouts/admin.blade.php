@@ -32,7 +32,7 @@
             <nav class="navbar navbar-expand-md sticky-top navbar-dark navbar-laravel">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img class='logo' src="{{ asset('/assets/2_Flat_logo_on_transparent_99x75.png') }}" alt="logo">
+                        <img class='logo' src="{{ asset('/assets/2_Flat_logo_on_transparent_115x71.png') }}" alt="logo">
                         
                     </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -66,7 +66,7 @@
                                         </ul>
                                     </div>
                                     <form class="form-inline">
-                                        <input class="form-control mr-sm-1" type="search">
+                                        <input class="form-control mr-sm-1" type="search" placeholder="#タグを検索">
                                         <button class="btn btn-primary" style="border-color:white;
                                         background-color:pink;"  type="submit">Search</button>
                                     </form>
