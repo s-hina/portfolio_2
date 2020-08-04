@@ -12,7 +12,13 @@ return [
     'Register' => '会員登録',
     'Name' => '名前',
     'Confirm Password' => 'パスワード再入力',
-    'Next' => '次へ'
+    'Next' => '次へ',
+
+    //email.blade.php
+    'Send Password Reset Link' => 'パスワード再設定リンクを送信',
+
+    //reset.blade.php, email.blade.php
+    'Reset Password' =>  'パスワード再設定'
 
 
 ];

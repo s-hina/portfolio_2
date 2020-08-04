@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'K-likey')
+@section('title', 'ホーム - K-likey')
 
 @section('content')
     <div class="container">
