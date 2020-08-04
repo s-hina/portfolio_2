@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', '会員登録 - K-likey')
 
 @section('content')
 <div class="container">
