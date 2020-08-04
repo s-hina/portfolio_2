@@ -67,8 +67,8 @@
                                     </div>
                                     <form class="form-inline">
                                         <input class="form-control mr-sm-1" type="search" placeholder="#タグを検索">
-                                        <button class="btn btn-primary" style="border-color:white;
-                                        background-color:pink;"  type="submit">Search</button>
+                                        <!--検索ボタン付ける場合は<button class="btn btn-primary" style="border-color:white;
+                                        background-color:pink;"  type="submit">Search</button> -->
                                     </form>
                                                     <!-- Authentication Links -->
                         {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}

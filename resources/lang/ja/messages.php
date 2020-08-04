@@ -1,9 +1,18 @@
 <?php
 
 return [
+    //login.blade.php, register.blade.php
     'Login' => 'ログイン',
     'E-Mail Address' => 'メールアドレス',
     'Password' => 'パスワード',
     'Remember Me' => 'ログイン情報を記憶する',
-    'Forgot Your Password?' => 'パスワードをお忘れですか？'
+    'Forgot Your Password?' => 'パスワードをお忘れですか？',
+    
+    //register.blade.php
+    'Register' => '会員登録',
+    'Name' => '名前',
+    'Confirm Password' => 'パスワード再入力',
+    'Next' => '次へ'
+
+
 ];

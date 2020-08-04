@@ -18,43 +18,64 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    {{-- 画面上部に表示するナビゲーションバーです。 --}}
+            <nav class="navbar navbar-expand-md sticky-top navbar-dark navbar-laravel">
+                <div class="container">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img class='logo' src="{{ asset('/assets/2_Flat_logo_on_transparent_115x71.png') }}" alt="logo">
+                        
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mr-auto">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                        </ul>
 
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-danger my-3">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                    <a class="navbar-brand" href="#">Top</a>
+                                    <div class="collapse navbar-collapse">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="#">Edit:投稿</a>
+                                            </li>
+                                            
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Category</a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a class="dropdown-item" href="#">Fashion</a>
+                                                    <a class="dropdown-item" href="#">Hair</a>
+                                                    <a class="dropdown-item" href="#">Group</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <form class="form-inline">
+                                        <input class="form-control mr-sm-1" type="search" placeholder="#タグを検索">
+                                        <!--検索ボタンつける場合は <button class="btn btn-primary" style="border-color:white;
+                                        background-color:pink;"  type="submit">Search</button> -->
+                                    </form>
+                                                    <!-- Authentication Links -->
+                        {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                        {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -66,11 +87,11 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
-                    </ul>
+                            @endguest
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
         <main class="py-4">
             @yield('content')
