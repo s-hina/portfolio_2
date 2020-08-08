@@ -25,6 +25,9 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         {{-- この章の後半で作成するCSSを読み込みます --}}
         <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+
+        <!-- ファビコン 要確認　-->
+        <!-- <link rel="shortcut-icon" href="{{ asset('/assets/favicon.png') }}"> -->
     </head>
     <body>
         <div id="app">
@@ -47,7 +50,7 @@
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
-                                    <a class="navbar-brand" href="#">Top</a>
+                                    <a class="navbar-brand" href="#">Home</a>
                                     <div class="collapse navbar-collapse">
                                         <ul class="navbar-nav">
                                             <li class="nav-item active">
@@ -67,8 +70,9 @@
                                     </div>
                                     <form class="form-inline">
                                         <input class="form-control mr-sm-1" type="search" placeholder="#タグを検索">
-                                        <button class="btn btn-primary" style="border-color:white;
-                                        background-color:pink;"  type="submit">Search</button>
+                                        <!--検索ボタン付ける場合は --> 
+                                        <!--<button class="btn btn-primary" style="border-color:white;
+                                        background-color:pink;"  type="submit">Search</button> -->
                                     </form>
                                                     <!-- Authentication Links -->
                         {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
