@@ -18,7 +18,13 @@ return [
     'Send Password Reset Link' => 'パスワード再設定リンクを送信',
 
     //reset.blade.php, email.blade.php
-    'Reset Password' =>  'パスワード再設定'
+    'Reset Password' =>  'パスワード再設定',
+
+    //profile.blade.php
+    'Profile Register' => 'プロフィール登録',
+    'Photo Profile' => 'プロフィール写真',
+    'Intro' => '自己紹介',
+    
 
 
 ];
