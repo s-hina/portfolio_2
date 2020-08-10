@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-// 以下を追記することでNews Modelが扱えるようになる
+// 以下を追記することでProfile Modelが扱えるようになる
 use App\Profile;
 
 use App\History;
