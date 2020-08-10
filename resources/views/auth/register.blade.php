@@ -68,29 +68,6 @@
                             <div class="col-md-6">
                                 <input id="profile_photo" type="profile_photo" class="form-control @error('profile_photo') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-                                @error('profile_photo')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-
-
-                        <div class="form-group row">
-                            <label for="profile_photo" class="col-md-4 col-form-label text-md-right">{{ __('Int') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="profile_photo" type="profile_photo" class="form-control @error('profile_photo') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('profile_photo')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
                         
 
                         <div class="form-group row">
